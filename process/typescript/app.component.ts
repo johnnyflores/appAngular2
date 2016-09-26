@@ -9,6 +9,9 @@ import {MediaItemComponent} from './media-item.component';
 })
 
 export class AppComponent {
+    onMediaItemDeleted(mediaItem) {
+
+    }
     firstMediaItem = {
         id: 1,
         name: "Firebug",

@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component, Input Output, EventEmitter} from 'angular2/core';
 
 @Component( {
     selector: 'media-item',
@@ -10,13 +10,9 @@ export class MediaItemComponent {
 
     @Input('mediaItemToWatch') mediaItem;
 
-    name =  'The Redemption';
-
-    wasWatched() {
-        return true;
-    }
+    @Output('deleted') delete = new EventEmitter();
 
     onDelete() {
-        console.log("Delete")
+        this.delete.emit(this.mediaItem);
     }
 }
