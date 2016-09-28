@@ -13,9 +13,9 @@ export class MediaItemFormComponent {
     ngOnInit() {
         this.form =  new ControlGroup ({
             'medium': new Control('Movies'),
-            'name': new Control(),
-            'category': new Control(),
-            'year': new Control()
+            'name': new Control(''),
+            'category': new Control(''),
+            'year': new Control('')
         });
     }
     onSubmit(mediaItem) {
