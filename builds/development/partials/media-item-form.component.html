@@ -1,7 +1,7 @@
 <header>
     <h2>Add Media to Watch</h2>
 </header>
-<form (ngSubmit)= "onSubmit(mediaItemForm.value)" #mediaItemForm="ngForm">
+<form (ngSubmit)= "onSubmit(form.value)" [ngFormModel]="form">
     <ul>
         <li>
             <label for="medium">Medium</label>
